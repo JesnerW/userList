@@ -11,16 +11,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const app = createApp(App)
 
-
 const pinia = createPinia()
-
-// Solo en desarrollo, habilitar devtools
-if (import.meta.env.DEV) {
-  // Esto permite que Pinia aparezca en Vue DevTools
-  pinia.use(({ store }) => {
-    store.$id = store.$id
-  })
-}
 
 app.use(pinia)
 app.use(createBootstrap())
